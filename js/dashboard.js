@@ -25,7 +25,6 @@ function render(){
   const shown=items.filter(x=>x.filename.toLocaleLowerCase('fr').includes(q));
   gallery.replaceChildren();
   $('#count').textContent=String(items.length);
-  $('#storage').textContent=size(items.reduce((n,x)=>n+(Number(x.size)||0),0));
   $('#gallery-info').textContent=items.length+' image'+(items.length>1?'s':'')+' enregistrée'+(items.length>1?'s':'');
   empty.hidden=shown.length!==0;
   for(const item of shown){
